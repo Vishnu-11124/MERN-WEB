@@ -1,7 +1,7 @@
 # MERN-Stack
 Web development using MERN stack.
 
------------------------------------------------------------- Git & Github ------------------------------------------------------------
+------------------------------------------------------- Git & Github -------------------------------------------------------
 
 -------- Git --------  
 
@@ -80,5 +80,60 @@ Web development using MERN stack.
 
     - main : branch name
 
+-> Init - Used to create a new git repo
 
---------------------------------------------------------------------------------------------------------------------------------------------
+    - Create folder
+
+    - git init
+
+    - Perform add and commit commands for updated files
+
+    - Create new repo on github
+
+    - git remote add origin <-link-> 
+
+    - git remote -v : Verify remote
+
+    - git branch : Check branch
+
+    - git branch -M main : Rename branch
+
+    - git push -u origin main 
+
+
+-------- Git Branches --------
+
+- Branch is like a separate workspace where you can make changes and try new ideas without affecting the main project.
+
+- git branch : To check branch
+
+- git branch -M main : Rename branch
+
+- git checkout -b <- new branch name -> : Create new branch
+
+- git checkout <- branch name -> : To navigate
+
+- git branch -d <- branch name -> : To delete branch
+
+
+-------- Merging Code --------
+
+- First Way
+
+    - git diff <- branch name -> : Compare commits,branches,files & more
+
+    - git merge <- branch name -> : Merge 2 branches
+
+- Second way
+
+    - Create a PR(Pull Request)
+
+    - Pull Request : It lets you tell others about changes you have pushed to a branch in a repository on GitHub.
+
+
+-> Pull - Used to fetch and download content from a remote repo and immediately update the local repo to match that content.
+
+    - git pull origin main
+
+
+----------------------------------------------------------------------------------------------------------------------------------
