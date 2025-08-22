@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Document</title>
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            background-color: #b38c8c;
+        }
+        
+        #flex-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%px;
+            margin:20px 10px ;
+        }
+
+        .flex-item {
+            width: 320px;
+            height: 350px;
+            background: rgb(154, 193, 232);
+            padding: 20px;
+            border-radius: 15px;
+            margin-right: 20px;
+        }
+        .flex-item1 {
+            width: 500px;
+            height: 350px;
+            background: rgb(154, 193, 232);
+            padding: 20px;
+            border-radius: 15px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Learning html from scratch -->
+    <header>
+        <h1 style="background: black; color: orange; height: 50px;  padding: 14px 0 0 10px; margin: 0;">HTML CODE</h1>
+    </header>
+    <!-- <p>This is a simple HTML document to demonstrate basic structure and elements.</p> -->
+
+    <main>
+        <h1 style="text-align: center;">Welcome to My Web Page</h1>
+        <div id="flex-container">
+            <div class="flex-item">
+                <h1 style="color: blueviolet;">Types of Heading Tags</h1>
+                <h1>Heading 1</h1> 
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </div>
+            <div class="flex-item">
+                <h1 style="color: blueviolet;">Paragraph Tags</h1>
+            <p>This is a paragraph tag. It is used to define a block of text.</p>
+            <p>Another paragraph can be added here to demonstrate multiple paragraphs.</p>
+            <p>Paragraphs are useful for organizing content into readable sections.</p>
+            </div>
+            <div class="flex-item1">
+                <h1 style="color: blueviolet;">Video Tag</h1>
+                <video controls style="width: 500px; height: 270px;">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                </video>
+            </div>
+    
+        </div>
+
+        <div id="flex-container">
+            <div class="flex-item">
+                <h1 style="color:blueviolet;">Image Tag</h1>
+                <img src="https://imgs.search.brave.com/8KYlcOgMa2tNUBTQg20yqOnGZMhXU-0t1FFYXr6lbuM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/ZmFzaGlvbi1tb2Rl/bC1wb3Nlcy5qcGc_/d2lkdGg9MTAwMCZm/b3JtYXQ9cGpwZyZl/eGlmPTAmaXB0Yz0w" alt="model Image" style="height: 280px;"> 
+            </div>   
+            <div class="flex-item">
+                <h1 style="color: blueviolet;">Anchor Tag</h1>
+                <p>Youtube : <a href="https://www.youtube.com/" target="_blank">Visit</a></p>
+                <p>Facebook : <a href="https://www.youtube.com/" target="_blank">Visit</a></p>
+                <p>Twitter : <a href="https://www.youtube.com/" target="_blank">Visit</a></p>
+                <p>This is an anchor tag that links to an external website. The target="_blank" attribute opens the link in a new tab.</p>
+            </div> 
+            <div class="flex-item1">
+                <h1 style="color:blueviolet;"> Superscript / Subscript Tag</h1>
+                <p>Superscript and subscript are used to format text in a specific way.</p>
+                <p>Superscript appears above the normal line of text, while subscript appears below it.</p>
+                <p>Superscript is often used for exponents, while subscript is used for chemical formulas or mathematical notation.</p>
+                <p>For example, H<sub>2</sub>O is the chemical formula for water, and E=mc<sup>2</sup> is Einstein's famous equation.</p>
+            </div>
+        </div>
+        <section>
+            <div id="flex-container">
+                <div class="flex-item">
+                    <h1 style="color: blueviolet;">Ordered List</h1>
+                    <p>This is an ordered list, which is used to display items in a specific sequence.</p>
+                    <h3>Mern Stack</h3>
+                    <ol>
+                        <li>MongoDB</li>
+                        <li>Express.js</li>
+                        <li>React.js</li>
+                            <ol type="a">
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ol>
+                        <li>Node.js</li>
+                    </ol>
+                </div>
+                <div class="flex-item">
+                    <h1 style="color: blueviolet;">Unordered List</h1>
+                    <p>This is an unordered list, which is used to display items without a specific order.</p>
+                    <h3>My Favorite Fruits</h3>
+                    <ul>
+                        <li>Apple</li>
+                        <li>Banana</li>
+                        <li>Cherry</li>
+                        <li>Mango</li>
+                            <ul>
+                                <li>Alphonso</li>
+                                <li>Langra</li>
+                                <li>Dasheri</li>
+                            </ul>
+                    </ul>
+                </div>    
+
+                <div class="flex-item">
+                    <h1 style="color: blueviolet;">Table</h1>
+                    <p>They consist of rows and columns, where each cell can contain text, images, or other elements.</p>
+                    <p>Tables are useful for organizing and presenting data in a clear and concise manner.</p>
+                    <table border="1" style="width: 100%; text-align: center;">
+                        <caption>Personal Information</caption>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>City</th>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>30</td>
+                            <td>New York</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>25</td>
+                            <td>Los Angeles</td>
+                        </tr>
+                        <tr>
+                            <td>Sam Brown</td>
+                            <td>22</td>
+                            <td>Chicago</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="flex-item">
+                    <h1 style="color: blueviolet;">iFrame Tag</h1>
+                    <p>The iFrame tag is used to embed another HTML document within the current document.</p>
+                    <p>It allows you to display content from another source, such as a webpage or a video, within your own page.</p>
+                    <iframe src="https://www.youtube.com/watch?v=IPPK8RyUjUg&list=WL&index=42&pp=gAQBiAQB" width="300" height="150" style="border:1px solid black;"></iframe>
+                </div>
+            </div>
+
+            <div id="flex-container">
+                <div class="flex-item">
+                    <h1>Form</h1>
+                    <p>Forms are used to collect user input and submit it to a server for processing.</p>
+                    <form action="#" method="post">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+                        <label for="date">Date</label><br>
+                        <input type="date" id="date" name="date"><br><br>
+                        <label for="file">Resume</label><br>
+                        <input type="file" id="file" name="file"><br><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+                        
+                        <input type="submit" value="Submit">
+                    
+                </div>
+                
+                <div class="flex-item">
+                    <form action="">
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" placeholder="Enter your message" rows="4" cols="30"></textarea><br><br>
+                        <label for="gender">Gender:</label><br>
+                        <input type="radio" name="gender" value="male"><label>Male</label>
+                        <input type="radio" name="gender" value="female"><label>Female</label>
+                        <input type="radio" name="gender" value="others"><label>Others</label><br><br>
+
+                        <label for="skills">Skills:</label><br>
+                        <input type="checkbox" name="skills" value="html"><label>HTML</label>
+                        <input type="checkbox" name="skills" value="css"><label>CSS</label>
+                        <input type="checkbox" name="skills" value="javascript"><label>JavaScript</label><br><br>
+
+                        <label for="graduation">Graduation:</label><br>
+                        <select id="graduation" name="graduation">
+                            <option value="">Select Option</option>
+                            <option value="highschool">High School</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="phd">PhD</option>
+                    </form>
+                </div>
+
+                
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="text-align: center; background: rgb(31, 29, 29); color: antiquewhite; height: 40px; padding-top: 15px; margin: 0;">&copy; 2023 My Web Page. All rights reserved.</p>
+    </footer>
+
+
+    
+</body>
+</html>
