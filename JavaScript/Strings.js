@@ -51,3 +51,8 @@ console.log(greeting); // Output: Hello, Alice!
 // 10.split - splits a string into an array of substrings
 let words = str.split(", "); // Splits by comma and space
 console.log(words); // Output: [ 'Hello', 'World!' ]
+
+// 11.trim - removes whitespace from both ends of a string
+let stringWithSpaces = "   Hello, World!   ";
+let trimmedStr = stringWithSpaces.trim();
+console.log(trimmedStr); // Output: Hello, World!
