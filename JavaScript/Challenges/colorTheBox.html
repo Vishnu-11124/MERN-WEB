@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color The Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dedfdf;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #8b0f0f;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #444;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Colour The Box</h1></center>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6'];
+        const backgroundColors = ['#ffcccc', '#cce5ff', '#ccffcc', '#ffffcc', '#e6ccff'];
+        boxes.forEach((box)=>{
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const randomBgColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+            box.style.backgroundColor = randomBgColor;
+            box.style.color = randomColor;
+        })
+    </script>
+</body>
+</html>

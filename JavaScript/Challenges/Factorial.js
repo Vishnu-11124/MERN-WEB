@@ -1,16 +1,10 @@
 
 let factorialFinder = (num) => {
-    if (num < 0) {
-        return "Factorial is not defined for negative numbers";
-    } else if (num === 0 || num === 1) {
-        return 1;
-    } else {
-        let factorial = 1;
-        for (let i = 2; i <= num; i++) {
-            factorial *= i;
-        }
-        return factorial;
+    let res = 1;
+    for (let i = 1; i <= num; i++) {
+        res *= i;
     }
+    return (num < 0) ? "Factorial is not defined for negative numbers" : res;
 }
 
 console.log(factorialFinder(5)); // Output: 120
