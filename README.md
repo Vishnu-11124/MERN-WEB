@@ -1,6 +1,25 @@
 # MERN-Stack
 Web development using MERN stack.
 
+------------------------------------------------------- Bootstrap -------------------------------------------------------
+
+
+1. Install Bootstrap via npm
+
+- npm install bootstrap
+
+- Then, in your src/index.js or src/main.jsx file:
+
+    - import 'bootstrap/dist/css/bootstrap.min.css';
+
+2. Use Bootstrap with CDN
+
+- In your public/index.html file, inside <head>:
+
+    - <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    
+
+
 ------------------------------------------------------- Git & Github -------------------------------------------------------
 
 -------- Git --------  
