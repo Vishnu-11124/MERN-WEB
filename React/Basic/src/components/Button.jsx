@@ -5,9 +5,10 @@ const Button = () => {
   let btnName = "Subscribe"
   // let bgClr = "white"
   return (
-    <div>
-      <button >{btnName}</button>
-    </div>
+    <>
+      <button>Subscribe</button>
+
+    </>
   )
 }
 
