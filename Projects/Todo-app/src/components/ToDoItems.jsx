@@ -1,8 +1,7 @@
 import React from 'react'
 
-const ToDoItems = () => {
-    let todoName = "Buy Milk";
-    let todoDate = "04/07/2023";
+const ToDoItems = ({todoName, todoDate}) => {
+    
   return (
     <div>
       <div className="container">
@@ -16,4 +15,4 @@ const ToDoItems = () => {
   )
 }
 
-export default ToDoItems
+export default ToDoItems;
