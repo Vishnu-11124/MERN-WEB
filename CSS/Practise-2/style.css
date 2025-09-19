@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 70px;
+    background-color: aquamarine;
+    
+}
+
+.title{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#outer{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+    margin: 40px 540px;
+}
+
+#inner{
+    height: 200px;
+    width: 200px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px  -10px;
+}
