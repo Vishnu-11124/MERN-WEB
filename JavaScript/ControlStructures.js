@@ -66,3 +66,45 @@ else {
 }
 
 // --------------------------------------------------------------------------------------
+
+// Switch Statement - allows a variable to be tested for equality against a list of values.
+switch (expression) {
+    case value1:    
+        // Code to execute if expression === value1
+        break;
+    case value2:    
+        // Code to execute if expression === value2
+        break;
+    default:    
+        // Code to execute if expression doesn't match any case
+}
+
+// example switch statement
+let day = 3;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day");
+}
+
+// --------------------------------------------------------------------------------------
