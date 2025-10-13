@@ -86,3 +86,25 @@ console.log("Even Numbers (filter):", evenNumbers);
 let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 console.log("Sum of Numbers (reduce):", sum);
 
+
+// spread operator - Allows an iterable such as an array to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected
+let moreFruits = ["Peach", "Plum"];
+let allFruits = [...fruits, ...moreFruits];
+console.log("All Fruits (spread operator):", allFruits); 
+
+// flat - Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth
+let nestedArray = [1, 2, [3, 4, [5, 6]]];
+let flatArray = nestedArray.flat(2); // Flattening to depth of 2
+console.log("Flat Array (flat):", flatArray);
+
+// from - Creates a new, shallow-copied Array instance from an array-like or iterable object
+let str = "Hello";
+let charArray = Array.from(str);
+console.log("Character Array (from):", charArray);
+
+// isArray - Determines whether the passed value is an Array
+console.log("Is fruits an array?", Array.isArray(fruits));
+console.log("Is str an array?", Array.isArray(str));
+
+
+

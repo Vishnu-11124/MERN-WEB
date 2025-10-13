@@ -48,6 +48,14 @@ console.log(sum(5, 10)); // Output: 15
 function greetWithDefault(name = "Guest") {
     return `Hello, ${name}!`;
 }
+
+let power = (x, y=2) => {
+    return x**y;
+}
+
+console.log(power(5)); // 25
+console.log(power(5,3)); // 125
+
 // Calling the greetWithDefault function without an argument
 console.log(greetWithDefault()); // Output: Hello, Guest!
 
