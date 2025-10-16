@@ -1,6 +1,6 @@
 // Scope - The context in which variables and functions are accessible 
 
-// Global Scope
+// Global Scope - accessible from anywhere in the code
 var globalVar = "I am a global variable";
 function globalFunction() {
     console.log(globalVar); // Accessible here
@@ -8,7 +8,7 @@ function globalFunction() {
 globalFunction();
 console.log(globalVar); // Accessible here
 
-// Local Scope
+// Local Scope - accessible only within the function
 function localFunction() {
     var localVar = "I am a local variable";
     console.log(localVar); // Accessible here
