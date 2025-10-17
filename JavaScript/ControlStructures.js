@@ -1,5 +1,21 @@
 
 // Control Structures - JavaScript provides several control structures to manage the flow of execution in a program. These include conditional statements, loops, and exception handling.
+/*
+Truthy values in JavaScript: true, non-zero numbers, non-empty strings, objects, arrays, and functions.
+Falsy values in JavaScript: false, 0, -0, 0n (BigInt zero), "", null, undefined, and NaN. 
+
+*/
+// --------------------------------------------------------------------------------------
+
+// Nullishing Operator (??) - returns the right-hand operand when the left-hand operand is null or undefined, otherwise returns the left-hand operand.
+let value = leftOperand ?? rightOperand;
+
+// example nullishing operator
+let value1;
+let defaultValue = "Default";
+let result1 = value1 ?? defaultValue; // result1 will be "Default"
+console.log(result1) // Output: Default
+
 
 // --------------------------------------------------------------------------------------
 
