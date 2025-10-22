@@ -1,14 +1,11 @@
 import React from 'react'
 
-const SingleItem = ({item}) => {
+const SingleItem = ({item, bought, handleBackground}) => {
 
-  let handleBackground = () => {
-    document.querySelector('#id').style.backgroundColor = "lightblue";
-  }
 
   return (
     <>
-      <li id='id' className="list-group-item d-flex ">{item} <button onClick={handleBackground} className="text-primary bg-warning mx-5">Buy</button></li>
+      <li id='id' className={` list-group-item d-flex ${ bought && 'active' }`} >{item} <button onClick={handleBackground} className="text-primary bg-warning mx-5">Buy</button></li>
     </>
   )
 }

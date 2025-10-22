@@ -1,6 +1,26 @@
 # MERN-Stack
 Web development using MERN stack.
 
+------------------------------------------------------- Tailwind CSS -------------------------------------------------------
+
+1. Install Tailwind CSS
+
+    -> npm install -D tailwindcss@3 postcss autoprefixer
+
+    -> npx tailwindcss init -p
+
+2. Add the paths to all of your template files in your 'tailwind.config.js' file.
+
+    ->  content: [ "./index.html", "./src/**/*.{js,ts,jsx,tsx}",]
+
+3. Add the @tailwind directives for each of Tailwind’s layers to your './src/index.css' file.
+
+    ->  @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+4. Start your build process.
+
 ------------------------------------------------------- Bootstrap -------------------------------------------------------
 
 
@@ -10,13 +30,13 @@ Web development using MERN stack.
 
 - Then, in your src/index.js or src/main.jsx file:
 
-    - import 'bootstrap/dist/css/bootstrap.min.css';
+    -> import 'bootstrap/dist/css/bootstrap.min.css';
 
 2. Use Bootstrap with CDN
 
 - In your public/index.html file, inside <head>:
 
-    - <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    -> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
     
 
 
