@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Random Bg color</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+      
+      
+      @keyframes gradient-shift {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+      }
+      
+      .gradient-animate {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        background-size: 200% 200%;
+        animation: gradient-shift 15s ease infinite;
+      }
+    </style>
+  </head>
+  <body style="background-color: #212121; color: #fff" class="h-screen flex items-center justify-center p-4 overflow-hidden">
+    
+    <!-- Main Container -->
+    <div class="text-center max-w-4xl w-full">
+      
+      <!-- Title Section -->
+      <div class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent px-4">
+          Start should change the Background color every second
+        </h1>
+      </div>
+      
+      <!-- Button Container -->
+      <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+        <button 
+          id="start" 
+          class="group relative px-8 py-3 text-lg font-semibold text-white overflow-hidden rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl active:scale-95 w-56">
+          <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Start
+          </span>
+        </button>
+        
+        <button 
+          id="stop" 
+          class="group relative px-8 py-3 text-lg font-semibold text-white overflow-hidden rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl active:scale-95 w-56">
+          <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 transition-all duration-300"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
+            </svg>
+            Stop
+          </span>
+        </button>
+      </div>
+      
+      
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

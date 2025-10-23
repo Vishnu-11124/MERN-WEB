@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Todo App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slideOut {
+            from {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+        }
+        
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+            }
+        }
+        
+        .task-item {
+            animation: fadeIn 0.4s ease-out;
+        }
+        
+        .task-removing {
+            animation: slideOut 0.3s ease-out;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, #0f172a, #1e293b);
+        }
+        
+        .neon-border {
+            border: 2px solid #3b82f6;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3),
+                        inset 0 0 20px rgba(59, 130, 246, 0.1);
+        }
+        
+        .neon-glow {
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .task-done {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        .scrollable {
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #3b82f6 #1e293b;
+        }
+
+        .scrollable::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .scrollable::-webkit-scrollbar-track {
+            background: #1e293b;
+            border-radius: 3px;
+        }
+
+        .scrollable::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 3px;
+        }
+
+        .scrollable::-webkit-scrollbar-thumb:hover {
+            background: #60a5fa;
+        }
+
+        .cyber-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border: 1px solid #334155;
+            position: relative;
+        }
+
+        .cyber-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        }
+
+        .app-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <div class="text-center mb-4">
+            <h1 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 mb-1" style="text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);">
+                TASKFLOW
+            </h1>
+            <p class="text-cyan-300 text-sm md:text-base font-light tracking-widest uppercase">Digital Task Management</p>
+        </div>
+
+        <!-- Main Container -->
+        <div class="neon-border rounded-2xl p-4 md:p-5 main-content bg-slate-900 bg-opacity-50 backdrop-blur-sm">
+            <!-- Input Form -->
+            <form id="form" class="mb-4">
+                <div class="flex gap-2">
+                    <input 
+                        id="givenTask" 
+                        type="text" 
+                        placeholder="Enter new task..." 
+                        class="flex-1 px-4 py-3 rounded-xl bg-slate-800 border-2 border-slate-700 focus:border-blue-500 focus:outline-none text-cyan-100 placeholder-slate-500 text-sm md:text-base transition-all duration-300 font-mono"
+                        required
+                    >
+                    <button 
+                        type="submit"
+                        class="px-4 md:px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-xl hover:from-blue-500 hover:to-cyan-400 focus:outline-none transform hover:scale-105 transition-all duration-300 shadow-lg uppercase tracking-wider neon-glow text-sm"
+                    >
+                        Add
+                    </button>
+                </div>
+            </form>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <div class="cyber-card rounded-xl p-3 text-center">
+                    <p class="text-blue-400 font-mono text-xs mb-1 uppercase tracking-wide">Active</p>
+                    <p id="active-count" class="text-3xl font-black text-cyan-300">0</p>
+                </div>
+                <div class="cyber-card rounded-xl p-3 text-center">
+                    <p class="text-emerald-400 font-mono text-xs mb-1 uppercase tracking-wide">Done</p>
+                    <p id="completed-count" class="text-3xl font-black text-emerald-300">0</p>
+                </div>
+            </div>
+
+            <!-- Tasks Grid -->
+            <div class="grid md:grid-cols-2 gap-3 md:gap-4 flex-1 overflow-hidden">
+                <!-- Active Tasks Section -->
+                <div class="cyber-card rounded-xl p-3 md:p-4 flex flex-col overflow-hidden">
+                    <h2 class="text-lg md:text-xl font-bold text-blue-400 mb-3 flex items-center gap-2 uppercase tracking-wide font-mono">
+                        <span class="text-xl">⚡</span> Active
+                    </h2>
+                    <div class="flex-1 overflow-y-auto scrollable pr-2">
+                        <ul id="tasks" class="space-y-2">
+                            <!-- Tasks will be added here -->
+                        </ul>
+                        <p id="no-tasks" class="text-slate-500 text-center py-8 text-sm font-mono hidden">
+                            // NO ACTIVE TASKS
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Completed Tasks Section -->
+                <div class="cyber-card rounded-xl p-3 md:p-4 flex flex-col overflow-hidden">
+                    <h2 class="text-lg md:text-xl font-bold text-emerald-400 mb-3 flex items-center gap-2 uppercase tracking-wide font-mono">
+                        <span class="text-xl">✓</span> Complete
+                    </h2>
+                    <div class="flex-1 overflow-y-auto scrollable pr-2">
+                        <ul id="finished-task" class="space-y-2">
+                            <!-- Completed tasks will be added here -->
+                        </ul>
+                        <p id="no-completed" class="text-slate-500 text-center py-8 text-sm font-mono hidden">
+                            // NO COMPLETED TASKS
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('#form');
+        const taskInput = document.querySelector('#givenTask');
+        const taskList = document.querySelector('#tasks');
+        const finishedList = document.querySelector('#finished-task');
+        const activeCount = document.querySelector('#active-count');
+        const completedCount = document.querySelector('#completed-count');
+        const noTasksMsg = document.querySelector('#no-tasks');
+        const noCompletedMsg = document.querySelector('#no-completed');
+
+        let tasks = [];
+        let completedTasks = [];
+
+        function updateCounts() {
+            activeCount.textContent = tasks.length;
+            completedCount.textContent = completedTasks.length;
+            
+            noTasksMsg.classList.toggle('hidden', tasks.length > 0);
+            noCompletedMsg.classList.toggle('hidden', completedTasks.length > 0);
+        }
+
+        function createTaskElement(taskname, isCompleted = false) {
+            const li = document.createElement('li');
+            li.className = 'task-item bg-slate-800 border border-slate-700 rounded-lg p-3 flex items-center justify-between group hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300';
+            
+            li.innerHTML = `
+                <span class="text-cyan-100 text-sm font-mono flex-1 mr-3 ${isCompleted ? 'task-done' : ''}">${taskname}</span>
+                <div class="flex gap-2">
+                    ${!isCompleted ? `
+                        <button class="done-btn px-3 py-1.5 bg-emerald-600 text-white rounded-md hover:bg-emerald-500 transition-colors duration-300 font-mono text-xs uppercase tracking-wide border border-emerald-500">
+                            Done
+                        </button>
+                    ` : ''}
+                    <button class="delete-btn px-3 py-1.5 bg-red-600 text-white rounded-md hover:bg-red-500 transition-colors duration-300 font-mono text-xs uppercase tracking-wide border border-red-500">
+                        Del
+                    </button>
+                </div>
+            `;
+            
+            return li;
+        }
+
+        function addTask(taskname) {
+            tasks.push(taskname);
+            const li = createTaskElement(taskname);
+            
+            const doneBtn = li.querySelector('.done-btn');
+            const deleteBtn = li.querySelector('.delete-btn');
+            
+            if (doneBtn) {
+                doneBtn.addEventListener('click', () => {
+                    moveToCompleted(taskname, li);
+                });
+            }
+            
+            deleteBtn.addEventListener('click', () => {
+                removeTask(taskname, li, false);
+            });
+            
+            taskList.appendChild(li);
+            updateCounts();
+        }
+
+        function moveToCompleted(taskname, li) {
+            li.classList.add('task-removing');
+            
+            setTimeout(() => {
+                tasks = tasks.filter(t => t !== taskname);
+                completedTasks.push(taskname);
+                li.remove();
+                
+                const completedLi = createTaskElement(taskname, true);
+                const deleteBtn = completedLi.querySelector('.delete-btn');
+                
+                deleteBtn.addEventListener('click', () => {
+                    removeTask(taskname, completedLi, true);
+                });
+                
+                finishedList.appendChild(completedLi);
+                updateCounts();
+            }, 300);
+        }
+
+        function removeTask(taskname, li, isCompleted) {
+            li.classList.add('task-removing');
+            
+            setTimeout(() => {
+                if (isCompleted) {
+                    completedTasks = completedTasks.filter(t => t !== taskname);
+                } else {
+                    tasks = tasks.filter(t => t !== taskname);
+                }
+                li.remove();
+                updateCounts();
+            }, 300);
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const taskname = taskInput.value.trim();
+            
+            if (taskname) {
+                addTask(taskname);
+                taskInput.value = '';
+                taskInput.focus();
+            }
+        });
+
+        // Initialize
+        updateCounts();
+    </script>
+</body>
+</html>

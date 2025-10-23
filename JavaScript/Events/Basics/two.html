@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async in js</title>
+</head>
+<body>
+    <h1>Async Code</h1>
+    <button id="btn">Stop</button>
+    <button id="btn1" style="margin-left: 10px;">Start</button>
+</body>
+<script>
+
+    let stopBtn = document.querySelector('#btn')
+
+    // setTimeout
+    let changeHeader = () =>{
+        let header = document.querySelector('h1')
+        header.innerText = 'Hey, Async Data!'
+        header.style.color = 'green'
+        console.log('Header changed')
+    }
+
+    const changeMe = setTimeout(changeHeader, 2000);
+
+    // clearTimeout
+    stopBtn.addEventListener('click',() => {
+        clearTimeout(changeMe)
+        console.log('Stoped header changing..')
+    });
+
+    
+
+
+</script>
+</html>

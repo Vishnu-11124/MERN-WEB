@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async in js</title>
+</head>
+<body>
+    <h1>SetInterval and ClearInterval</h1>
+    <button id="btn1" >Start</button>
+    <button id="btn" style="margin-left: 10px;">Stop</button>
+</body>
+<script>
+    /*
+    // setInterval  
+    const interval = setInterval(() => {
+        console.log('task  completed')
+    },2000)
+
+    // clearInterval
+    clearInterval(interval)
+    */
+
+    const start = document.querySelector('#btn1')
+    const end = document.querySelector('#btn')
+    
+    start.addEventListener('click', () => {
+        const name = setInterval(() => {
+        console.log('task  completed')
+    },2000)
+
+    end.addEventListener('click', () => {
+        clearInterval(name)
+        console.log('Task stopped..')
+        })
+    })
+
+    
+   
+
+</script>
+</html>
