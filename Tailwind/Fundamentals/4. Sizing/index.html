@@ -9,28 +9,75 @@
   </head>
   <body class="p-20">
     <!-- Width -->
-    <!-- https://tailwindcss.com/docs/width -->
+    <h1>1. Width</h1>
+    <div class="bg-teal-100 p-5">
+      <div class="bg-red-500 w-0">0</div>
+      <div class="bg-red-500 w-1">1</div>
+      <div class="bg-red-500 w-1.5">1.5</div>
+      <div class="bg-red-500 w-2">2</div>
+      <div class="bg-red-500 w-4">4</div>
+      <div class="bg-red-500 w-8">8</div>
+    </div>
 
     <!-- Percentages -->
+     <h1 class="mt-7">2. Percentages</h1>
+     <div class="bg-green-300 mb-5 p-5">
+      <div class="bg-red-500 mb-2 w-1/2">1/2</div>
+      <div class="bg-red-500 mb-2 w-1/3">1/3</div>
+      <div class="bg-red-500 mb-2 w-2/3">2/3</div>
+      <div class="bg-red-500 mb-2 w-1/4">1/4</div>
+      <div class="bg-red-500 mb-2 w-2/4">2/4</div>
+      <div class="bg-red-500 mb-2 w-3/4">3/4</div>
+      <div class="bg-red-500 mb-2 w-1/5">1/5</div>
+      <div class="bg-red-500 mb-2 w-2/5">2/5</div>
+     </div>
 
     <!-- Max Width -->
-    <!-- https://tailwindcss.com/docs/max-width -->
+     <h1 class="mt-7">3. Max Width</h1>
+     <div class="bg-pink-400 p-10 mb-10 max-w-xl">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam vel mollitia totam corrupti eum officiis sunt possimus, ut non reiciendis, enim, provident impedit aut? Quo quas, perferendis sapiente neque magni pariatur eius repellat tempore consectetur quaerat itaque tenetur nesciunt, quam aperiam, tempora perspiciatis ut nam ullam autem soluta. Aliquam, aspernatur illo recusandae dolore placeat mollitia minima fugit accusantium laudantium, ipsa quis nesciunt in dicta est quibusdam obcaecati quos! Rerum voluptates pariatur animi illum? Natus, facilis!
+     </div>
+    
 
     <!-- Width of the viewport -->
-    <!-- 100% of container -->
+     <h1 class="mt-7">4. Width of the viewport</h1>
+     <div class="bg-green-500 my-2 p-5 w-screen">Tailwind ViewPort</div>
+     <div class="bg-green-500 my-2 p-5 w-full">Tailwind ViewPort</div>
+    
     <!-- Arbitrary Width -->
+     <h1 class="mt-7">5. Arbitrary Width</h1>
+     <div class="bg-teal-500 text-white my-2 w-[500px]">Arbitary Width</div>
+     <div class="bg-teal-500 text-white my-2 w-[300px]">Arbitary Width</div>
 
     <!-- Height (Most of the same options as widths) -->
-    <!-- https://tailwindcss.com/docs/height -->
+    <h1 class="mt-7">6. Height</h1>
+    <div class="mt-10 flex item-end">
+      <div class="bg-red-500 h-4 ml-5">Height 4</div>
+      <div class="bg-red-500 h-8 ml-5">Height 8</div>
+      <div class="bg-red-500 h-12 ml-5">Height 12</div>
+      <div class="bg-red-500 h-16 ml-5">Height 16</div>  
+    </div>
+    
 
     <!-- Min Height -->
-    <!-- https://tailwindcss.com/docs/min-height -->
-
+     <h1 class="mmt-7">7. Min Height</h1>
+     <div class="p-5 h- bg-green-300 mb-5 h-[300px]">
+        <div class="min-h-full bg-teal-400">Take Full Height</div>
+     </div>
+    
     <!-- Max Height -->
-    <!-- https://tailwindcss.com/docs/max-height -->
+     <h1 class="mt-7">8. Max Height</h1>
+     <div class="bg-orange-300 mb-5 h-[150px]">
+        <div class="m-20 bg-pink-300 h-48 max-h-full">Max Height</div>
+     </div>
+    
 
     <!-- Full screen height -->
+     <h1 class="mt-7">9. Full Screen Height</h1>
+     <div class="bg-blue-400 mb-4 h-screen">Hello</div>
 
     <!-- Width Auto -->
+     <h1 class="mt-7">10. Width Auto</h1>
+     <div class="bg-green-200 p-5 w-auto">Auto</div>
   </body>
 </html>
