@@ -7,13 +7,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Borders</title>
   </head>
-  <body>
+  <body class="p-4">
     <!-- Border Width & Colors -->
-    <!-- https://tailwindcss.com/docs/border-width -->
+    <h1 class="mb-3">1. Border Width & Colors</h1>
+    <div class="border-2 border-green-300 m-6">
+      <div class="w-96 m-3 p-3 border">Border All Around</div>
+      <div class="w-96 m-3 p-3 border-4">Border with Width</div>
+      <div class="w-96 m-3 p-3 border-4 border-pink-500">Border with Color</div>
+      <div class="w-96 m-3 p-3 border-x-4 border-orange-400">Border on X-axis</div>
+      <div class="w-96 m-3 p-3 border-y-4 border-cyan-400">Border on Y-axis</div>
+    </div>
 
     <!-- Border Radius -->
-    <!-- https://tailwindcss.com/docs/border-radius -->
+    <h1 class="my-3">2. Border Radius</h1>
+    <div class="border-2 border-green-300 m-6"> 
+      <div class="rounded w-96 m-3 p-5 bg-teal-300">Border Rounded</div>
+      <div class="rounded-lg w-96 m-3 p-5 bg-teal-300">Border Rounded lg</div>
+      <div class="rounded-xl w-96 m-3 p-5 bg-teal-300">Border Rounded xl</div>
+      <div class="rounded-full w-96 m-3 p-5 bg-teal-300">Border Rounded Full</div>
+    </div>
 
     <!-- Specific Sides -->
+     <h1 class="my-3">3. Specific Sides</h1>
+     <div class="w-96 m-3 p-3 bg-yellow-300 rounded-t-xl">Border Top Rounded</div>
+     <div class="w-96 m-3 p-3 bg-yellow-300 rounded-b-xl">Border Bottom Rounded</div>
   </body>
 </html>

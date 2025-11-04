@@ -7,15 +7,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Backgrounds & Shadows</title>
   </head>
-  <body>
+  <body class="p-3">
     <!-- Background Images -->
-    <!-- https://tailwindcss.com/docs/background-image -->
+    <h1 class="mb-4">1. Background Images</h1>
+    <div class="h-[300px] w-[400px] mb-5 bg-[url('https://images.pexels.com/photos/33771131/pexels-photo-33771131.jpeg')] bg-cover bg-center bg-no-repeat"></div>
+
 
     <!-- Shadows -->
-    <!-- https://tailwindcss.com/docs/drop-shadow -->
-    <!-- I know we didn't cover flexbox, but it's just for demo purposes -->
+    <h1 class="mb-4">2. Shadows</h1>
+    <div class="flex flex-wrap mb-5">
+      <div class="w-[400px] mt-10 ml-4 p-3 shadow-md">Shadow Medium</div>
+      <div class="w-[400px] mt-10 ml-4 p-3 shadow-lg">Shadow Large</div>
+      <div class="w-[400px] mt-10 ml-4 p-3 shadow-xl">Shadow Extra Large</div>
+      <div class="w-[400px] mt-10 ml-4 p-3 shadow-2xl">Shadow 2 Extra Large</div>
+
+       <div class="w-[400px] mt-10 ml-4 p-3 shadow-inner shadow-blue-300 ">Shadow Inner</div>
+
+       <div class="w-[400px] mt-10 ml-4 p-3 shadow-xl shadow-red-500">Shadow with color</div>
+    </div>
 
     <!-- Gradients -->
-    <!-- https://tailwindcss.com/docs/gradient-color-stops -->
+    <h1 class="mb-4">3. Gradients</h1>
+    <div class="h-40 bg-gradient-to-r from-purple-400 to-red-600 m-8 text-center p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore delectus culpa excepturi molestiae error alias aspernatur reiciendis vitae ut in ea similique maxime magni nihil beatae, fuga pariatur adipisci quisquam harum. Cum voluptatem, aspernatur suscipit voluptatum nisi atque eos!</div>
+
+    <div class="h-40 bg-gradient-to-b from-green-400 via-yellow-400 to-cyan-600 m-8 text-center p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore delectus culpa excepturi molestiae error alias aspernatur reiciendis vitae ut in ea similique maxime magni nihil beatae, fuga pariatur adipisci quisquam harum. Cum voluptatem, aspernatur suscipit voluptatum nisi atque eos!</div>
   </body>
 </html>

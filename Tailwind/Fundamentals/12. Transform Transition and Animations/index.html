@@ -1,0 +1,36 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Transform & Transition</title>
+  </head>
+  <body class="p-10">
+    <!-- No Transition -->
+     <h1 class="my-4">1. No Transition</h1>
+     <button class="p-5 text-white bg-purple-400 hover:bg-purple-500">Click Me</button>
+
+    <!-- Transition and Transform-->
+     <h1 class="my-4">2. Transition</h1>
+     <button class="p-5 text-white bg-purple-400 transition hover:bg-red-500 duration-300 ease-in-out delay-150">Click Me</button>
+
+    <!-- 1. https://tailwindcss.com/docs/transition-property -->
+    <!-- 2. https://tailwindcss.com/docs/transition-duration -->
+    <!-- 3. https://tailwindcss.com/docs/transition-timing-function -->
+    <!-- 4. https://tailwindcss.com/docs/transition-delay -->
+    <!-- 5. https://tailwindcss.com/docs/animation -->
+
+    <!-- Transformation -->
+     <h1 class="my-3">3. Transformation</h1>
+     <button class="p-5 ml-5 text-white bg-blue-400 transition duration-1000 delay-150 ease-in-out hover:scale-110 hover:-translate-y-1 hover:rotate-45">Click Me</button>
+
+    <!-- Animation -->
+    <h1 class="my-3">4. Animation</h1>
+    <div class="flex justify-center">
+      <div class="p-20  bg-blue-400 animate-bounce rounded-full">Bounce</div>
+    </div>
+
+  </body>
+</html>
