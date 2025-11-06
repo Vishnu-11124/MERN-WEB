@@ -9,6 +9,8 @@ import UpdateArray from './UpdateArray'
 import UpdateObject from './UpdateObject'
 import UpdateArrayOfObjects from './UpdateArrayOfObjects'
 import Todo from './Todo'
+import ShoppingList from './ShoppingList'
+import CopyInput from './CopyInput'
 
 const Main = () => {
       const products = [
@@ -37,6 +39,8 @@ const Main = () => {
       </div>
       <UpdateArrayOfObjects/>
       <Todo/>
+      <ShoppingList/>
+      <CopyInput/>
     </main>
   )
 }
