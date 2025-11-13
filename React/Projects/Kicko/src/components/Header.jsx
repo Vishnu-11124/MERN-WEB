@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Search, ShoppingCart, User, Heart, Menu, X } from 'lucide-react'
 import { SearchContext } from '../db/search'
-
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -27,21 +27,21 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
-              New Arrivals
-            </a>
-            <a href="#" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
-              Men
-            </a>
+            <Link to="/" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+              Home
+            </Link>
+            <Link to="/products" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+              Products
+            </Link>
             <a href="#" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
               Women
             </a>
-            <a href="#" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
-              Kids
-            </a>
-            <a href="#" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
-              Sale
-            </a>
+            <Link to="/contact" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+              Contact
+            </Link>
+            <Link to="/about" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+              About
+            </Link>
           </div>
 
           {/* Search Bar */}

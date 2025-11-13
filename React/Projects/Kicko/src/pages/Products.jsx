@@ -2,10 +2,13 @@ import React, { useContext, useState } from 'react'
 import { DataList } from '../db/data'
 import { ShoppingCart, Zap, Heart } from 'lucide-react'
 import { SearchContext } from '../db/search'
+import { useNavigate } from 'react-router-dom'
 
 const Products = () => {
    const productsList = useContext(DataList);
    const {searchValue} = useContext(SearchContext)
+
+   const navigate = useNavigate()
    
    const [brand, setBrand] = useState('all')
 
@@ -77,10 +80,11 @@ const Products = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {
-            filteredProducts.map(({img, title, star, newPrice, prevPrice }, index) => {
+            filteredProducts.map(({id, img, title, star, newPrice, prevPrice }) => {
               return (
                 <div 
-                  key={index} 
+                  onClick={() => navigate(`/products/${id}`)}
+                  key={id} 
                   className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden group"
                 >
                   {/* Image Section */}

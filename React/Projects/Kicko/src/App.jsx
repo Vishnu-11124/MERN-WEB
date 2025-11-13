@@ -1,22 +1,14 @@
-import React from 'react'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
-import Products from './components/Products.jsx'
-import HeroSection from './components/HeroSection.jsx'
-import { MainWrapper } from './db/Main.jsx'
-
+import { RouterProvider } from "react-router-dom"
+import { MainWrapper } from "./db/Main"
+import router from "./router/MainRouter"
 
 
 const App = () => {
   return (
     <>
-      <MainWrapper>
-        <Header />
-        <HeroSection/>
-        <Products/>
-        <Footer/>
+      <MainWrapper >
+        <RouterProvider router={router}/>
       </MainWrapper>
-    
     </>
   )
 }
