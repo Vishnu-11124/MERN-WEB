@@ -4,6 +4,7 @@ import UserInfo from "./components/UserInfo"
 import type { User, Admin } from "../src/types"
 import Counter from "./components/Counter"
 import Todo from "./components/Todo"
+import Form from "./components/Form"
 
 function App() {
 
@@ -32,9 +33,10 @@ function App() {
             <AdminInfo adminData ={admin} />
           </div>
           <Counter/>
-        </div>
-        <div className="m-3">
           <Todo/>
+        </div>
+        <div className="m-6">
+          <Form/>
         </div>
       </div>
       
