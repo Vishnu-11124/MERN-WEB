@@ -13,6 +13,17 @@ let power = (val1: number, val2: number) => {
 
 console.log(power(5,7));
 
+// void function
+function consoleError(errmsg: string): void{
+    console.log(errmsg)
+}
+
+
+// never function
+function handleError(errmsg: string) : never {
+    throw new Error(errmsg)
+}
+
 
 //  Function with default parameter
 function result(mark1: number, mark2: number, mark3: number = 67){
