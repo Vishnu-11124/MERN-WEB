@@ -9,6 +9,15 @@ app.get('/', (req, res) => {
 
 app.use('/students', students)
 
+// Route Params
+app.get('/teacher/delete/:id', (req, res) =>{
+  res.send(`User deleted ${req.params.id}`)
+})
+
+app.get('/ecom1/:category/:brand', (req, res) => {
+  res.send(`The selected ${req.params.category} is ${req.params.brand}`)
+})
+
 /*
 // Http Methods
 app.get('/student', (req, res) => {
