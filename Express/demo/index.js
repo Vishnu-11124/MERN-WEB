@@ -1,13 +1,30 @@
 import express from 'express'
+import path from 'path'
 import students from './routes/student.js'
+import teachers from './teachers.js'
+import userCredentials from './middlewares/log.js'
+
 
 const app = express()
 
+
+app.use(userCredentials)
+app.use(express.static('./public'))
+
 app.get('/', (req, res) => {
-  res.send("<h1>Home Page</h1>")
+  res.sendFile(path.join(process.cwd(), './public/index.html'))
 })
 
 app.use('/students', students)
+
+app.get('/teachers', (req, res) => {
+  res.json(teachers)
+})
+
+// Query String
+app.get('/products', (req, res) => {
+  res.send(`The category is ${req.query.category}`)
+})
 
 // Route Params
 app.get('/teacher/delete/:id', (req, res) =>{
