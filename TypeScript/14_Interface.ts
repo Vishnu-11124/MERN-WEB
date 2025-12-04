@@ -38,3 +38,46 @@ const admin: Admin = {
         return { userId, email: "sample@gmail.com" }
     }
 }
+
+// ------------------------------------------------------
+
+interface Movie {
+    title: string,
+    director: string,
+    getMovieDetails(): string
+} 
+
+const movie1: Movie = {
+    title: "Inception",
+    director: "Christopher Nolan",
+    getMovieDetails: () => {
+        return `${movie1.title} directed by ${movie1.director}`
+    }
+}
+
+console.log(movie1.getMovieDetails());
+
+// ------------------------------------------------------
+
+interface MathOperation {
+    (x: number, y: number): number;
+}
+
+const add: MathOperation = (a, b) => a + b;
+console.log(add(25, 65))
+const multiply: MathOperation = (a, b) => a * b;
+console.log(multiply(7, 4))
+
+// ------------------------------------------------------
+
+interface Song {
+    getInfo(title: string, artist: string) : string
+}
+
+const songDetails: Song = {
+    getInfo: (title, artist) => {
+        return `The song ${title} is sung by ${artist}`
+    }
+}
+
+console.log(songDetails.getInfo('Dance Monkey','David Guptha'))
