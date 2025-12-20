@@ -176,3 +176,4 @@ myLinkedList.push(8);
 // console.log(`Size: ${myLinkedList.size()}`);
 myLinkedList.clear();
 console.log(myLinkedList);
+
