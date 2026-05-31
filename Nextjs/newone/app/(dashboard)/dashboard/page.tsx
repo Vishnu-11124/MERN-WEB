@@ -3,7 +3,10 @@ import React from 'react'
 const Dashboard = () => {
   return (
     <div>
-      <h1>Dashboard Page</h1>
+      <div className='flex gap-4'>
+        <button>Analytics</button>
+        <button>Users</button>
+      </div>
     </div>
   )
 }
