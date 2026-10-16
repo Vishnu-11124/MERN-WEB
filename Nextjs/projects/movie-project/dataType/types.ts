@@ -16,5 +16,6 @@ export interface Movie {
   description: string;
   director: string;
   duration: number;
+  image: string;
   poster: string;
 }

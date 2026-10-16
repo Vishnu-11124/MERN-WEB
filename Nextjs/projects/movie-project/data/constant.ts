@@ -27,6 +27,7 @@ export const movies: Movie[] = [
     director: "Chidambaram",
     duration: 135,
     poster: "/movies/manjummel-boys.jpg",
+    image: "https://picsum.photos/seed/manjummel-boys/600/900",
   },
   {
     id: 2,
@@ -54,6 +55,7 @@ export const movies: Movie[] = [
     director: "Girish A. D.",
     duration: 156,
     poster: "/movies/premalu.jpg",
+    image: "https://picsum.photos/seed/premalu/600/900",
   },
   {
     id: 3,
@@ -81,6 +83,7 @@ export const movies: Movie[] = [
     director: "Jude Anthany Joseph",
     duration: 150,
     poster: "/movies/2018.jpg",
+    image: "https://picsum.photos/seed/2018/600/900",
   },
   {
     id: 4,
@@ -108,6 +111,7 @@ export const movies: Movie[] = [
     director: "Jithu Madhavan",
     duration: 158,
     poster: "/movies/aavesham.jpg",
+    image: "https://picsum.photos/seed/aavesham/600/900",
   },
   {
     id: 5,
@@ -135,6 +139,7 @@ export const movies: Movie[] = [
     director: "Jeethu Joseph",
     duration: 164,
     poster: "/movies/drishyam.jpg",
+    image: "https://picsum.photos/seed/drishyam/600/900",
   },
   {
     id: 6,
@@ -162,6 +167,7 @@ export const movies: Movie[] = [
     director: "Lokesh Kanagaraj",
     duration: 174,
     poster: "/movies/vikram.jpg",
+    image: "https://picsum.photos/seed/vikram/600/900",
   },
   {
     id: 7,
@@ -189,6 +195,7 @@ export const movies: Movie[] = [
     director: "C. Prem Kumar",
     duration: 158,
     poster: "/movies/96.jpg",
+    image: "https://picsum.photos/seed/96/600/900",
   },
   {
     id: 8,
@@ -216,6 +223,7 @@ export const movies: Movie[] = [
     director: "T. J. Gnanavel",
     duration: 164,
     poster: "/movies/jai-bhim.jpg",
+    image: "https://picsum.photos/seed/jai-bhim/600/900",
   },
   {
     id: 9,
@@ -243,6 +251,7 @@ export const movies: Movie[] = [
     director: "Sudha Kongara",
     duration: 153,
     poster: "/movies/soorarai-pottru.jpg",
+    image: "https://picsum.photos/seed/soorarai-pottru/600/900",
   },
   {
     id: 10,
@@ -270,6 +279,7 @@ export const movies: Movie[] = [
     director: "Lokesh Kanagaraj",
     duration: 164,
     poster: "/movies/leo.jpg",
+    image: "https://picsum.photos/seed/leo/600/900",
   },
   {
     id: 11,
@@ -297,6 +307,7 @@ export const movies: Movie[] = [
     director: "S. S. Rajamouli",
     duration: 187,
     poster: "/movies/rrr.jpg",
+    image: "https://picsum.photos/seed/rrr/600/900",
   },
   {
     id: 12,
@@ -324,6 +335,7 @@ export const movies: Movie[] = [
     director: "S. S. Rajamouli",
     duration: 159,
     poster: "/movies/baahubali.jpg",
+    image: "https://picsum.photos/seed/baahubali/600/900",
   },
   {
     id: 13,
@@ -351,6 +363,7 @@ export const movies: Movie[] = [
     director: "Sandeep Reddy Vanga",
     duration: 186,
     poster: "/movies/arjun-reddy.jpg",
+    image: "https://picsum.photos/seed/arjun-reddy/600/900",
   },
   {
     id: 14,
@@ -378,6 +391,7 @@ export const movies: Movie[] = [
     director: "Hanu Raghavapudi",
     duration: 163,
     poster: "/movies/sita-ramam.jpg",
+    image: "https://picsum.photos/seed/sita-ramam/600/900",
   },
   {
     id: 15,
@@ -405,6 +419,7 @@ export const movies: Movie[] = [
     director: "Nitesh Tiwari",
     duration: 161,
     poster: "/movies/dangal.jpg",
+    image: "https://picsum.photos/seed/dangal/600/900",
   },
   {
     id: 16,
@@ -432,6 +447,7 @@ export const movies: Movie[] = [
     director: "Rajkumar Hirani",
     duration: 170,
     poster: "/movies/3-idiots.jpg",
+    image: "https://picsum.photos/seed/3-idiots/600/900",
   },
   {
     id: 17,
@@ -459,6 +475,7 @@ export const movies: Movie[] = [
     director: "Vidhu Vinod Chopra",
     duration: 147,
     poster: "/movies/12th-fail.jpg",
+    image: "https://picsum.photos/seed/12th-fail/600/900",
   },
   {
     id: 18,
@@ -486,6 +503,7 @@ export const movies: Movie[] = [
     director: "Christopher Nolan",
     duration: 169,
     poster: "/movies/interstellar.jpg",
+    image: "https://picsum.photos/seed/interstellar/600/900",
   },
   {
     id: 19,
@@ -513,6 +531,7 @@ export const movies: Movie[] = [
     director: "Christopher Nolan",
     duration: 148,
     poster: "/movies/inception.jpg",
+    image: "https://picsum.photos/seed/inception/600/900",
   },
   {
     id: 20,
@@ -540,6 +559,7 @@ export const movies: Movie[] = [
     director: "Frank Darabont",
     duration: 142,
     poster: "/movies/shawshank-redemption.jpg",
+    image: "https://picsum.photos/seed/shawshank-redemption/600/900",
   },
   {
     id: 21,
@@ -567,6 +587,7 @@ export const movies: Movie[] = [
     director: "Bong Joon-ho",
     duration: 132,
     poster: "/movies/parasite.jpg",
+    image: "https://picsum.photos/seed/parasite/600/900",
   },
   {
     id: 22,
@@ -594,6 +615,7 @@ export const movies: Movie[] = [
     director: "Yeon Sang-ho",
     duration: 118,
     poster: "/movies/train-to-busan.jpg",
+    image: "https://picsum.photos/seed/train-to-busan/600/900",
   },
   {
     id: 23,
@@ -621,6 +643,7 @@ export const movies: Movie[] = [
     director: "Makoto Shinkai",
     duration: 106,
     poster: "/movies/your-name.jpg",
+    image: "https://picsum.photos/seed/your-name/600/900",
   },
   {
     id: 24,
@@ -648,6 +671,7 @@ export const movies: Movie[] = [
     director: "Hayao Miyazaki",
     duration: 125,
     poster: "/movies/spirited-away.jpg",
+    image: "https://picsum.photos/seed/spirited-away/600/900",
   },
   {
     id: 25,
@@ -675,5 +699,6 @@ export const movies: Movie[] = [
     director: "Galder Gaztelu-Urrutia",
     duration: 94,
     poster: "/movies/the-platform.jpg",
+    image: "https://picsum.photos/seed/the-platform/600/900",
   },
 ];
