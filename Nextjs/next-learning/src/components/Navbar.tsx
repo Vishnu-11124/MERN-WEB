@@ -9,6 +9,7 @@ const links = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
+  { href: '/login', label: "Login"}
 ];
 
 const focusRing =
