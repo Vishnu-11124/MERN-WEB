@@ -19,3 +19,9 @@ export interface Movie {
   image: string;
   poster: string;
 }
+
+export interface MovieSectionDetails {
+    movies: Movie[],
+    sectionTitle: string,
+    subTitle: string
+}
